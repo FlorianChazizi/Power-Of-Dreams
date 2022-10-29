@@ -1,0 +1,27 @@
+
+
+<nav class="navbar">
+  <div class="logo"> Power Of Dreams</div>
+  
+
+  <ul class="nav-links">
+
+  <input type="checkbox" id="checkbox_toggle" />
+  <label for="checkbox_toggle" class="hamburger"> &#9776;</label>
+
+  <div class="menu">
+    
+      <li> <a href="/"> Home </a> </li>
+      <% if(!currentUser) { %> 
+        <li> <a href="/register"> Register </a> </li>
+        <li> <a href="/login"> Login </a> </li>
+      <% }else { %> 
+        <li> <a href="/dreams"> Dreams </a> </li>
+        <li> <a href="/cdreams"> Create a Dream </a> </li>
+        <li> <a href="/logout"> Log out </a> </li>
+      <% } %> 
+
+        
+  </div>
+</ul>
+</nav>

@@ -1,0 +1,41 @@
+<% layout('/layout/boilerplate') %> 
+
+      <% if(success.length > 0) { %>
+        <div class="alert alert-success">
+            <%= success %>
+        </div>
+    <% } %> 
+    <% if(error.length > 0) { %>
+      <div class="alert alert-danger">
+          <%= error %>
+      </div>
+  <% } %> 
+   
+    <div class="container">
+      <div class="row">
+       <div class="col-lg-12 text-left ">
+        <a href="/cdreams" class="btn btn-primary p-3 mt-5 mb-5  offset-md-5 offset-sm-5 offset-lg-5"> Post a Dream </a>
+       </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-lg-sm text-center">
+          <h2> Hello <%= username  %>, wanna post Today?  </h2>
+        </div>
+      </div>
+    </div>
+<hr>
+    <% for ( let dream of dreams ) { %>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 offset-md-3 offset-sm-3">
+          <div class="card  text-bg-light mb-3  ">
+            <h1 class="card-header text-center"> <%= dream.title %> </h1>
+            <h4 class="font-weight-light text-right">Written by : <%= dream.author.username %> </h4>
+            <h4 class="card-text text m-3 p-3 font-white "> <%= dream.description %> </h4>
+          </div>
+        </div>
+        
+      </div>
+      
+    <% } %>
